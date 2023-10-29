@@ -9,7 +9,7 @@
     <title>Snowscape Resort</title>
 </head>
 <body>
-    <header>
+   <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
               <a class="navbar-brand" href="/index.html">Snowscape Retreat
@@ -42,52 +42,56 @@
             </div>
           </nav>
 
-          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="/images/Stein_Eriksen_residences_Park_City_1-min.png" class="d-block w-100" alt="Resort Residence" >
-              </div>
-              <div class="carousel-item">
-                <img src="/images/MBS-LOBBY-LIVING-ROOM.jpg" class="d-block w-100" alt="Living Area" >
-              </div>
-              <div class="carousel-item">
-                <img src="/images/mountainhotel.jpg" class="d-block w-100" alt="Mountain View" >
-            </div>
-            <div class="carousel-item">
-              <img src="/images/poolmountain.webp" class="d-block w-100" alt="Inside Pool" >
-              </div>
-            <div class="carousel-item">
-                <img src="/images/outsidepool.jpg" class="d-block w-100" alt="Outside Pool">
-            </div>
-            </div>
-          </div>
-
     </header>
-
     <main>
-        <section id="cta">
-            <h2>Book Your Dream Getaway</h2>
-            <p>Discover the ultimate mountain retreat at Snowscape Retreate. Experience the tranquility and serenity of this resort, nested in the heart of the mountain. We offer luxurious accomodations, fine-dining, rejuvenating spa treatments and breathtaking mountain views.</p>
-            <p>Your dream vacation is just a click away. Secure your stay now and embrace the tranquility of the mountains.</p>
-            <a href="/Rooms.html" class="btn btn-primary">Book Now</a>
-        </section>
+        <h1>Overnight Cost Estimator</h1>
+        <form id="costEstimatorForm">
+            <div>
+                <label for="name">Name: </label>
+                <input type="text" id="name" required>
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" id="email" required>
+            </div>
+            <div>
+                <label for="checkInDate">Check-in Date: </label>
+                <input type="date" id="checkInDate" required>
+            </div>
+            <div>
+                <label for="checkOutDate">Check-out Date: </label>
+                <input type="date" id="checkOutDate" required>
+            </div>
+            <div>
+                <label for="roomType">Room Type: </label>
+                <input type="radio" name="roomType" value="queen">Queen
+                <input type="radio" name="roomType" value="king">King
+                <input type="radio" name="roomType" value="suite">2-Bedroom Suite
+            </div>
+            <div>
+                <label for="nights">Number of Nights: </label>
+                <input type="number" id="nights" min="1" max="28" required>
+            </div>
+            <div>
+                <label for="discount">Discounts: </label>
+                <input type="radio" name="discount" value="none" checked >None
+                <input type="radio" name="discount" value="aaa">AAA/Senior (10%)
+                <input type="radio" name="discount" value="military">Military (20%)
+            </div>
+            <div>
+                <label for="adults">Number of Adults: </label>
+                <input type="number" id="adults" min="1" max="4" required>
+            </div>
+            <div>
+                <label for="children">Number of Children: </label>
+                <input type="number" id="children" min="0" max="4" required>
+            </div>
+            <button type="button" id="estimateCostBtn">Estimate Stay Cost</button>
+        </form>
+        <div id="result">
 
-        <!-- Contact Information -->
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Email: info@Snowscaperetreat.com</p>
-            <p>Phone: +123-456-7890</p>
-            <p>Address: 123 Mountain Road, Mountainville, USA 30004</p>
-        </section>
-
-        <!-- About Section -->
-        <section id="about">
-            <h2>About Snowscape</h2>
-            <p>Welcome to Snowscape Retreat, a hidden gem nestled in the heart of the serene mountains. Our mission is to provide you with an unforgettable escape into nature's tranquility, where relaxation and rejuvenation are guaranteed.</p>
-            <p>Surrounded by breathtaking landscapes and luxurious accommodations, Snowscape Retreat offers a unique experience for every guest. Whether you seek adventure on the slopes, a peaceful spa retreat, or a romantic mountain getaway, our resort has it all.</p>
-            <p>Discover the beauty of our mountain haven and the warm hospitality of our dedicated staff. We invite you to create lasting memories and experience the true essence of serenity at Snowscape Retreat.</p>
-        </section>
-
+        </div>
+        <div id="messageDiv"></div>
     </main>
 
     <footer>
@@ -119,7 +123,9 @@
             </div>
         </div>
     </footer>
-    
+
     <link rel="stylesheet" href="index.css">
+    <script src="/rooms.js"></script>
+
 </body>
 </html>

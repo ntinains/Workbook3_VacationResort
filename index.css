@@ -1,0 +1,54 @@
+body {
+    font-family: sans-serif, 'Times New Roman', Times, serif;
+    background: linear-gradient(to bottom, rgba(173, 216, 230, 0.7), rgba(240, 248, 255, 0.7));
+    background-size: cover;
+    background-attachment:fixed;
+    color: #333;
+    display:flex;
+    flex-direction: column;
+}
+
+html, body {
+    height:100%;
+}
+
+main {
+    flex: 1;
+
+}
+.navbar {
+    background: rgba(240, 240, 240, 0.7);
+}
+.navbar-brand {
+    font-size: 30px;
+    color: #005B7D;
+}
+.nav-link {
+    font-size:20px;
+    color: #005B7D;
+}
+
+.nav-link:hover {
+    color: #009ACD;
+}
+
+
+.carousel-item img {
+    height: 750px;
+    width: auto;
+    margin: 0 auto;
+    border-radius: 98%;
+}
+
+.carousel {
+    postion: sticky;
+    top: 10px;
+    z-index:1;
+}
+
+footer{
+    background: #7fc3dbdc;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
